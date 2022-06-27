@@ -1,0 +1,41 @@
+/fastlane/Preview.html
+/fastlane/screenshots/
+
+# Xcode
+#
+Swift.gitignore
+/screenshots/
+/Assets/Build/
+
+/vendor/
+
+/fastlane/report.xml
+.DS_Store
+## Build generated
+build/
+DerivedData/
+
+## CI Files
+TravisPods
+CIPods
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+xcuserdatad/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+Flash Chat.app.dSYM.zip
+Flash Chat.ipa
+
