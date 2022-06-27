@@ -2,15 +2,16 @@
 /fastlane/screenshots/
 
 # Xcode
-#
+/pods
 Swift.gitignore
 /screenshots/
 /Assets/Build/
-
-/vendor/
-
-/fastlane/report.xml
+#macOS
 .DS_Store
+
+/vendor/  
+/fastlane/report.xml
+
 ## Build generated
 build/
 DerivedData/
