@@ -15,6 +15,21 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        titleLabel.text = ""
+        var charIndex = 0.0
+        let titleText = "💎 SanChat"
+
+        for letter in titleText {
+            charIndex += 1
+            
+            //nifty way to create a text typing animation
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false, block: { (timer) in
+                self.titleLabel.text?.append(letter)
+            })
+            
+            
+            
+        }
        
     }
     
