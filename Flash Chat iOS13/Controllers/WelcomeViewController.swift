@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         //Use CLTypingLabel
-        titleLabel.text = "💎ClearChat"
+        titleLabel.text = K.appName
         
         //nifty way to create a text typing animation natively
         /*
