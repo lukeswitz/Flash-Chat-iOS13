@@ -18,6 +18,7 @@
 		0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628190235DF01B00E35CAF /* ChatViewController.swift */; };
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
 		489C9E76E5697DA282CFE4B2 /* Pods_Flash_Chat_iOS13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D0083C931B59A9EF8B86EB /* Pods_Flash_Chat_iOS13.framework */; };
+		EB3281D2286B8C4400A6B44B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3281D1286B8C4400A6B44B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		14D0083C931B59A9EF8B86EB /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53921960E944E1D9B9AAE3D1 /* Pods-Flash Chat iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.debug.xcconfig"; sourceTree = "<group>"; };
 		70971F1A36253D6C374703C8 /* Pods-Flash Chat iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.release.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.release.xcconfig"; sourceTree = "<group>"; };
+		EB3281D1286B8C4400A6B44B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
 				0B628181235DEE8400E35CAF /* LaunchScreen.storyboard */,
 				0B628184235DEE8400E35CAF /* Info.plist */,
+				EB3281D1286B8C4400A6B44B /* GoogleService-Info.plist */,
 			);
 			path = "Flash Chat iOS13";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 				0B62816F235DEE8100E35CAF /* Sources */,
 				0B628170235DEE8100E35CAF /* Frameworks */,
 				0B628171235DEE8100E35CAF /* Resources */,
+				8966BA1AB4F650C5BAA1D93F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +192,7 @@
 			files = (
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
+				EB3281D2286B8C4400A6B44B /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
@@ -196,6 +201,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8966BA1AB4F650C5BAA1D93F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D81FDDC69A7AFD1C5FE11614 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,10 +407,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.appbrewery.Flash-Chat-iOS13";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootdowndigital.ClearChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -405,10 +427,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.appbrewery.Flash-Chat-iOS13";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootdowndigital.ClearChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

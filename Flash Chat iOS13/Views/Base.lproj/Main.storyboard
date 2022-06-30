@@ -47,7 +47,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="h49-FQ-l3q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💎ClearChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💎ClearChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                 <rect key="frame" x="20" y="418" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ph1-wX-D3a"/>
