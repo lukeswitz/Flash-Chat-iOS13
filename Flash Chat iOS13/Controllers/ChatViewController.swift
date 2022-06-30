@@ -19,14 +19,16 @@ class ChatViewController: UIViewController {
     var messages: [Message] = [
         Message(sender: "1@4.com", body: "Hey!"),
         Message(sender: "annie@1.com", body: "Hello"),
-        Message(sender: "luke@1.com", body: "What's Up?")
+        Message(sender: "luke@1.com", body: "What's Up? Alpha blah text and stuff and things to make the lines long")
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         navigationItem.hidesBackButton = true
         title = K.appName
+        
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
@@ -45,7 +47,6 @@ class ChatViewController: UIViewController {
             print("Error signing out: %@", signOutError)
         }
     }
-    
 
 }
 
@@ -55,8 +56,8 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = messages[indexPath.row].body
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! Message_Cell
+        cell.label.text = messages[indexPath.row].body
         return cell
     }
     
