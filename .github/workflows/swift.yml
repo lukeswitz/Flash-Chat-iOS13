@@ -13,6 +13,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    name: Setup Bundler
+        run: |
+            command -v $pod_command >/dev/null 2>&1 || { 
+        printFailure
+        echo >&2 "Cocoapods is not installed. Please install it from https://cocoapods.org and try again."
+        exit 1
+    }
+    printSuccess
+    if [[ $is_ci == 1 ]]; then
+        runCmd "$pod_command install --repo-update" "Installing pods"
+    else 
+        runCmd "$pod_command install" "Installing pods"
+    fi
     - name: Build
       run: swift build -v
     - name: Run tests
