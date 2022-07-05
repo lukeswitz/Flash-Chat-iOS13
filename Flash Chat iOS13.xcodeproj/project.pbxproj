@@ -82,12 +82,12 @@
 		0B628175235DEE8100E35CAF /* Flash Chat iOS13 */ = {
 			isa = PBXGroup;
 			children = (
+				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
 				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
 				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
 				EB405B82286DF94E003ED266 /* Model */,
 				0B628193235DF03400E35CAF /* Views */,
 				0B628192235DF02000E35CAF /* Controllers */,
-				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
 				0B628181235DEE8400E35CAF /* LaunchScreen.storyboard */,
 				0B628184235DEE8400E35CAF /* Info.plist */,
 				EB3281D1286B8C4400A6B44B /* GoogleService-Info.plist */,
@@ -418,7 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ECFYJZ64T;
 				INFOPLIST_FILE = "Flash Chat iOS13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,7 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ECFYJZ64T;
 				INFOPLIST_FILE = "Flash Chat iOS13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

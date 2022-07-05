@@ -29,6 +29,10 @@ class ChatViewController: UIViewController {
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         
         loadMessages()
+        DispatchQueue.main.async {
+         
+            self.tableView.reloadData()
+        }
         
     }
     
@@ -51,35 +55,41 @@ class ChatViewController: UIViewController {
                             let newMessage = Message(sender: messageSender, body: messageBody)
                             self.messages.append(newMessage)
                             
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
-                                self.messageTextfield.text = ""
-                            }
+                           
 
                         }
                     }
                 }
-            }
-        }
-        
-    }
-    
-    @IBAction func sendPressed(_ sender: UIButton) {
-        
-        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
-            db.collection(K.FStore.collectionName).addDocument(data: [
-                K.FStore.senderField: messageSender,
-                K.FStore.bodyField: messageBody,
-                K.FStore.dateField: Date().timeIntervalSince1970
-            ]) { (error) in
-                if let e = error {
-                    print("Error adding to firestore \(e.localizedDescription)")
-                } else {
-                    print("Successfully saved data")
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+                    
                 }
             }
         }
-        
+    }
+    
+    @IBAction func sendPressed(_ sender: UIButton) {
+        if (!messageTextfield.text!.isEmpty) {
+            if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
+                db.collection(K.FStore.collectionName).addDocument(data: [
+                    K.FStore.senderField: messageSender,
+                    K.FStore.bodyField: messageBody,
+                    K.FStore.dateField: Date().timeIntervalSince1970
+                ]) { (error) in
+                    if let e = error {
+                        print("Error adding to firestore \(e.localizedDescription)")
+                    } else {
+                        DispatchQueue.main.async {
+                            self.messageTextfield.text = ""
+                        }
+                        print("Successfully saved data")
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func logoutPressed(_ sender: Any) {
@@ -103,8 +113,26 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! Message_Cell
-        cell.label.text = messages[indexPath.row].body
+        
+        let message = messages[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        
+        cell.label.text = message.body
+        
+        cell.leftImageView.isHidden = false
+        cell.rightImageView.isHidden = true
+        cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
+        cell.label.textColor = UIColor.white
+        
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.blue)
+            cell.label.textColor = UIColor(named: K.BrandColors.lightBlue)
+        }
+    
+
         return cell
     }
     

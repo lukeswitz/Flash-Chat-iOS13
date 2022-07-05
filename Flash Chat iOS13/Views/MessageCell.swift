@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Message_Cell: UITableViewCell {
+class MessageCell: UITableViewCell {
     
     @IBOutlet weak var messageBubble: UIView!
     
@@ -16,11 +16,13 @@ class Message_Cell: UITableViewCell {
     
     @IBOutlet weak var rightImageView: UIImageView!
     
+    @IBOutlet weak var leftImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        messageBubble.layer.cornerRadius = messageBubble.frame.size.height / 4
+        messageBubble.layer.cornerRadius = messageBubble.frame.size.height / 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

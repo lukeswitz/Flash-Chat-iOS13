@@ -296,14 +296,13 @@
                                             <constraint firstAttribute="width" constant="40" id="r0I-1T-oMW"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="ule-T7-Irb"/>
                                         </constraints>
-                                        <color key="tintColor" name="BrandLightPurple"/>
+                                        <color key="tintColor" name="BrandLightBlue"/>
                                         <state key="normal" image="paperplane.fill" catalog="system"/>
                                         <connections>
                                             <action selector="sendPressed:" destination="lwd-AH-u8E" eventType="touchUpInside" id="GuM-yU-UjQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="BrandPurple"/>
                                 <constraints>
                                     <constraint firstItem="pym-e9-R2r" firstAttribute="top" secondItem="xlo-0G-XA6" secondAttribute="top" constant="12" id="27T-Dx-HYk"/>
                                     <constraint firstItem="UWj-GQ-Vph" firstAttribute="leading" secondItem="xlo-0G-XA6" secondAttribute="leading" constant="20" id="4PM-6Z-EWr"/>
@@ -317,10 +316,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S6L-hg-cne">
                                 <rect key="frame" x="0.0" y="88" width="414" height="706"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6YX-ca-E8f"/>
-                        <color key="backgroundColor" name="BrandPurple"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
                         <constraints>
                             <constraint firstItem="S6L-hg-cne" firstAttribute="trailing" secondItem="6YX-ca-E8f" secondAttribute="trailing" id="DBU-jl-PPO"/>
                             <constraint firstItem="xlo-0G-XA6" firstAttribute="leading" secondItem="6YX-ca-E8f" secondAttribute="leading" id="JMa-Pn-SZL"/>
@@ -356,6 +356,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bb7-fc-JzW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="BrandBlue"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="Eqb-DC-64P" id="QRc-hS-URU"/>
+                        </connections>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -371,7 +379,7 @@
         <designable name="y7D-jv-BlJ"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="XW3-IM-1tl"/>
+        <segue reference="aUm-Qp-f0v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
@@ -381,9 +389,6 @@
         </namedColor>
         <namedColor name="BrandLightBlue">
             <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BrandLightPurple">
-            <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandPurple">
             <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
