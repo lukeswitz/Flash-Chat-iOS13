@@ -1,5 +1,6 @@
+[![Codacy Security Scan](https://github.com/lukeswitz/bootcamp_Flash-Chat/actions/workflows/codacy.yml/badge.svg)](https://github.com/lukeswitz/bootcamp_Flash-Chat/actions/workflows/codacy.yml)
 
-## Key Points
+## Key Lesson Points
 
 * How to integrate third party libraries in your app using Cocoapods and Swift Package Manager.
 * How to store data in the cloud using Firebase Firestore.
