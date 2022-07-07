@@ -54,19 +54,17 @@ class ChatViewController: UIViewController {
                             data[K.FStore.bodyField] as? String {
                             let newMessage = Message(sender: messageSender, body: messageBody)
                             self.messages.append(newMessage)
-                            
-                           
-
+ 
                         }
                     }
                 }
-                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
                     self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                     
                 }
+                
             }
         }
     }
@@ -120,16 +118,16 @@ extension ChatViewController: UITableViewDataSource {
         
         cell.label.text = message.body
         
-        cell.leftImageView.isHidden = false
-        cell.rightImageView.isHidden = true
-        cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
-        cell.label.textColor = UIColor.white
-        
         if message.sender == Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
-            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.blue)
-            cell.label.textColor = UIColor(named: K.BrandColors.lightBlue)
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.label.textColor = UIColor(named: K.BrandColors.purple)
+        } else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightBlue)
+            cell.label.textColor = UIColor(named: K.BrandColors.blue)
         }
     
 

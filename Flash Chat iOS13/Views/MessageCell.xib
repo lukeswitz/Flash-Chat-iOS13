@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -40,7 +39,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="BrandPurple"/>
+                                <color key="backgroundColor" name="BrandLighterPurple"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="O49-dw-JKI" secondAttribute="bottom" constant="10" id="DqH-OY-Fw0"/>
                                     <constraint firstItem="O49-dw-JKI" firstAttribute="top" secondItem="DHa-aH-yf0" secondAttribute="top" constant="10" id="c5U-Aa-xHY"/>
@@ -82,8 +81,8 @@
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
         <image name="YouAvatar" width="36" height="36"/>
-        <namedColor name="BrandPurple">
-            <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="BrandLighterPurple">
+            <color red="1" green="0.88121640682220459" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
